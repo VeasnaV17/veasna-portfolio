@@ -26,26 +26,41 @@ export default function Home() {
       {/* HERO */}
       <HeroAmbient>
         <div className="relative z-10 max-w-5xl mx-auto w-full">
-          <div className="text-xs uppercase tracking-[0.2em] text-muted mb-7 flex items-center gap-3">
-            <span className="w-6 h-px bg-accent" /> {profile.title}
-          </div>
-          <h1 className="font-serif font-normal text-6xl md:text-8xl leading-none tracking-tight">
-            Veasna <em className="italic text-accent font-light">Vunn</em>
-          </h1>
-          <p className="text-lg md:text-xl text-muted mt-6 max-w-xl font-light">
-            Building brand presence across social, content, and campaigns — from Siem Reap to Phnom Penh.
-          </p>
-          <p className="text-sm text-muted2 mt-5 max-w-lg leading-relaxed">{profile.summary}</p>
-          <div className="flex flex-wrap gap-4 mt-11">
-            <a href="#experience" className="px-7 py-3.5 rounded-full bg-ivory text-void text-sm font-medium hover:shadow-[0_0_0_6px_rgba(143,155,255,0.35)] transition-shadow">
-              View Experience
-            </a>
-            <a id="downloadCv" href="#" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
-              Download CV ↓
-            </a>
-            <a href="#contact" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
-              Contact Me
-            </a>
+          <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+            <div className="max-w-2xl">
+              <div className="text-xs uppercase tracking-[0.2em] text-muted mb-6 md:mb-7 flex items-center gap-3">
+                <span className="w-6 h-px bg-accent" /> {profile.title}
+              </div>
+              <div className="flex flex-col items-start text-left mt-2 md:mt-3">
+                <h1 className="font-khmer text-6xl md:text-8xl leading-[0.85] tracking-tight text-[#D4AF37] mt-1 md:mt-2 text-left">
+                  វ៉ុន វាសនា
+                </h1>
+                <p className="text-xl md:text-2xl text-ivory mt-3 md:mt-4 font-sans text-left">Veasna Vunn</p>
+              </div>
+              <p className="text-lg md:text-xl text-muted mt-6 max-w-xl font-light">
+                Building brand presence across social, content, and campaigns — from Siem Reap to Phnom Penh.
+              </p>
+              <p className="text-sm text-muted2 mt-5 max-w-lg leading-relaxed">{profile.summary}</p>
+              <div className="flex flex-wrap gap-4 mt-11">
+                <a href="#experience" className="px-7 py-3.5 rounded-full bg-ivory text-void text-sm font-medium hover:shadow-[0_0_0_6px_rgba(143,155,255,0.35)] transition-shadow">
+                  View Experience
+                </a>
+                <a id="downloadCv" href="#" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
+                  Download CV ↓
+                </a>
+                <a href="#contact" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
+                  Contact Me
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[280px] lg:w-[320px] pointer-events-none">
+              <img
+                src="/images/route-map.png"
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </HeroAmbient>
@@ -58,10 +73,8 @@ export default function Home() {
         </Reveal>
         <div className="grid md:grid-cols-[0.9fr_1.4fr] gap-14 items-start">
           <Reveal>
-            <div className="aspect-[3/4] rounded-2xl border border-white/10 bg-panel flex items-center justify-center">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accentDim to-accent flex items-center justify-center font-serif text-4xl text-void">
-                VV
-              </div>
+            <div className="aspect-[3/4] rounded-2xl border border-white/10 bg-panel flex items-center justify-center overflow-hidden">
+              <img src="/images/profile.jpg" alt="Veasna Vunn" className="w-full h-full object-cover" />
             </div>
           </Reveal>
           <Reveal delay={0.1}>

@@ -20,7 +20,8 @@ module.exports = {
       fontFamily: {
         serif: ["Fraunces", "serif"],
         sans: ["Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"]
+        mono: ["JetBrains Mono", "monospace"],
+        khmer: ["Moulpali", "serif"]
       },
       keyframes: {
         marquee: {
