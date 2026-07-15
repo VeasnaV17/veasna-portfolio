@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --line: rgba(237, 235, 230, 0.09);
+  --accent-glow: rgba(143, 155, 255, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #08090b;
+  color: #EDEBE6;
+  font-family: 'Inter', sans-serif;
+}
+
+::selection {
+  background: #8f9bff;
+  color: #08090b;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #08090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #161920;
+  border-radius: 10px;
+}
+
+.section-line {
+  border-color: var(--line);
+}
+
+.glow {
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
