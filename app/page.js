@@ -40,8 +40,8 @@ export default function Home() {
             <a href="#experience" className="px-7 py-3.5 rounded-full bg-ivory text-void text-sm font-medium hover:shadow-[0_0_0_6px_rgba(143,155,255,0.35)] transition-shadow">
               View Experience
             </a>
-            <a href="/gallery" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
-              See Gallery
+            <a id="downloadCv" href="#" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
+              Download CV ↓
             </a>
             <a href="#contact" className="px-7 py-3.5 rounded-full border border-white/10 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
               Contact Me
