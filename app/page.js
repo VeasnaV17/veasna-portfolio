@@ -66,16 +66,16 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg leading-relaxed font-light">{profile.summary}</p>
-            <div className="grid grid-cols-2 gap-6 mt-10">
-              <div className="border-t border-white/10 pt-3">
-                <div className="text-[11px] uppercase tracking-widest text-muted2 mb-1">Based In</div>
-                <div className="text-sm">{profile.location}</div>
+              <div className="grid grid-cols-2 gap-8 mt-14">
+                <div className="border-t border-white/10 pt-5">
+                  <div className="text-xs uppercase tracking-widest text-muted2 mb-2">Based In</div>
+                  <div className="text-lg font-serif">{profile.location}</div>
+                </div>
+                <div className="border-t border-white/10 pt-5">
+                  <div className="text-xs uppercase tracking-widest text-muted2 mb-2">Current Role</div>
+                  <div className="text-lg font-serif">Digital Marketing Executive</div>
+                </div>
               </div>
-              <div className="border-t border-white/10 pt-3">
-                <div className="text-[11px] uppercase tracking-widest text-muted2 mb-1">Current Role</div>
-                <div className="text-sm">Digital Marketing Executive</div>
-              </div>
-            </div>
           </Reveal>
         </div>
       </section>
