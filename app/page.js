@@ -4,6 +4,7 @@ import Reveal from "../components/Reveal";
 import Carousel from "../components/Carousel";
 import GalleryCard from "../components/GalleryCard";
 import BlogCard from "../components/BlogCard";
+import HeroAmbient from "../components/HeroAmbient";
 import {
   profile,
   experience,
@@ -23,8 +24,7 @@ export default function Home() {
       <Nav />
 
       {/* HERO */}
-      <section id="hero" className="relative min-h-screen flex items-center px-6 md:px-16 pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_20%,rgba(143,155,255,0.12),transparent)]" />
+      <HeroAmbient>
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-xs uppercase tracking-[0.2em] text-muted mb-7 flex items-center gap-3">
             <span className="w-6 h-px bg-accent" /> {profile.title}
@@ -48,7 +48,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </HeroAmbient>
 
       {/* ABOUT */}
       <section id="about" className="max-w-6xl mx-auto px-6 md:px-16 py-32">
