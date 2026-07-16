@@ -66,10 +66,10 @@ export default function Home() {
       </HeroAmbient>
 
       {/* ABOUT */}
-      <section id="about" className="max-w-6xl mx-auto px-6 md:px-16 py-32">
+      <section id="about" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">01 — About</span>
-          <h2 className="font-serif text-4xl md:text-5xl mb-14">Profile</h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">Profile</h2>
         </Reveal>
         <div className="grid md:grid-cols-[0.9fr_1.4fr] gap-14 items-start">
           <Reveal>
@@ -79,7 +79,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg leading-relaxed font-light">{profile.summary}</p>
-              <div className="grid grid-cols-2 gap-8 mt-14">
+              <div className="grid grid-cols-2 gap-8 mt-10">
                 <div className="border-t border-white/10 pt-5">
                   <div className="text-xs uppercase tracking-widest text-muted2 mb-2">Based In</div>
                   <div className="text-lg font-serif">{profile.location}</div>
@@ -94,11 +94,11 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="max-w-6xl mx-auto px-6 md:px-16 py-32">
+      <section id="experience" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">02 — Career</span>
           <h2 className="font-serif text-4xl md:text-5xl mb-4">Work Experience</h2>
-          <p className="text-muted max-w-lg mb-16">
+          <p className="text-muted max-w-lg mb-10">
             A timeline of roles across hospitality, F&amp;B, B2B media, and remote digital marketing internships.
           </p>
         </Reveal>
@@ -133,10 +133,10 @@ export default function Home() {
       </section>
 
       {/* EDUCATION */}
-      <section id="education" className="max-w-6xl mx-auto px-6 md:px-16 py-32">
+      <section id="education" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">03 — Education</span>
-          <h2 className="font-serif text-4xl md:text-5xl mb-14">Education Background</h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">Education Background</h2>
         </Reveal>
         <div className="grid md:grid-cols-2 gap-6">
           {education.map((ed, i) => (
@@ -158,7 +158,7 @@ export default function Home() {
           ))}
         </div>
 
-        <Reveal delay={0.15} className="mt-16">
+        <Reveal delay={0.15} className="mt-10">
           <div className="text-xs uppercase tracking-widest text-muted2 mb-5">Academic Achievements</div>
           <div className="flex flex-col gap-3">
             {achievements.map((a, i) => (
@@ -172,10 +172,10 @@ export default function Home() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="max-w-6xl mx-auto px-6 md:px-16 py-32">
+      <section id="skills" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">04 — Capabilities</span>
-          <h2 className="font-serif text-4xl md:text-5xl mb-14">Skills</h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-10">Skills</h2>
         </Reveal>
         <div className="grid md:grid-cols-2 gap-14">
           <Reveal>
@@ -202,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* GALLERY TEASER */}
-      <section className="py-24 border-t border-white/5">
+      <section className="py-16 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-end justify-between mb-10">
           <div>
             <span className="block font-mono text-xs text-accent mb-4">05 — Work</span>
@@ -217,7 +217,7 @@ export default function Home() {
 
       {/* BLOG TEASER */}
       {posts.length > 0 && (
-        <section className="py-24 border-t border-white/5">
+        <section className="py-16 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-end justify-between mb-10">
             <div>
               <span className="block font-mono text-xs text-accent mb-4">06 — Writing</span>
@@ -232,7 +232,7 @@ export default function Home() {
       )}
 
       {/* CONTACT */}
-      <section id="contact" className="max-w-6xl mx-auto px-6 md:px-16 py-32">
+      <section id="contact" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
         <Reveal>
           <div className="rounded-[28px] border border-white/10 bg-gradient-to-br from-panel to-panel2 p-10 md:p-20 text-center relative overflow-hidden">
             <div className="absolute -top-60 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-accent/20 blur-3xl pointer-events-none" />
