@@ -66,7 +66,7 @@ export default function Home() {
       </HeroAmbient>
 
       {/* ABOUT */}
-      <section id="about" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
+      <section id="about" className="max-w-6xl mx-auto px-6 md:px-16 pt-14 pb-0">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">01 — About</span>
           <h2 className="font-serif text-4xl md:text-5xl mb-10">Profile</h2>
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
+      <section id="experience" className="max-w-6xl mx-auto px-6 md:px-16 pt-14 pb-0">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">02 — Career</span>
           <h2 className="font-serif text-4xl md:text-5xl mb-4">Work Experience</h2>
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* EDUCATION */}
-      <section id="education" className="max-w-6xl mx-auto px-6 md:px-16 py-20">
+      <section id="education" className="max-w-6xl mx-auto px-6 md:px-16 pt-14 pb-0">
         <Reveal>
           <span className="block font-mono text-xs text-accent mb-4">03 — Education</span>
           <h2 className="font-serif text-4xl md:text-5xl mb-10">Education Background</h2>
@@ -141,7 +141,12 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6">
           {education.map((ed, i) => (
             <Reveal key={i} delay={i * 0.05}>
-              <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full">
+              <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full flex flex-col items-center text-center">
+                <img
+                  src={ed.institution.includes("Thammasat") ? "/images/logos/thammasat.png" : "/images/logos/jpa.png"}
+                  alt={ed.institution}
+                  className="w-20 h-20 object-contain mb-6"
+                />
                 <div className="font-mono text-xs text-muted2 mb-2">{ed.year}</div>
                 <div className="font-serif text-xl mb-1">{ed.degree}</div>
                 <div className="text-sm text-muted mb-5">{ed.institution}</div>
@@ -160,12 +165,19 @@ export default function Home() {
 
         <Reveal delay={0.15} className="mt-10">
           <div className="text-xs uppercase tracking-widest text-muted2 mb-5">Academic Achievements</div>
-          <div className="flex flex-col gap-3">
-            {achievements.map((a, i) => (
-              <div key={i} className="flex flex-wrap justify-between gap-4 py-4 border-b border-white/10">
-                <span className="text-sm">{a.name}</span>
-                <span className="font-mono text-xs text-muted2">{a.date}</span>
-              </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => (
+              <Reveal key={index} delay={index * 0.05}>
+                <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full flex flex-col items-center text-center">
+                  <img
+                    src={achievement.name.includes("National University of Singapore") ? "/images/logos/nus.png" : achievement.name.includes("Henly") || achievement.name.includes("Henley") ? "/images/logos/henley.webp" : "/images/logos/jpa.png"}
+                    alt={achievement.name}
+                    className="w-20 h-20 object-contain mb-6"
+                  />
+                  <div className="font-serif text-xl mb-2">{achievement.name}</div>
+                  <div className="font-mono text-sm text-accent">{achievement.date}</div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Reveal>
