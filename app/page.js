@@ -223,7 +223,13 @@ export default function Home() {
           <a href="/gallery" className="text-sm text-muted hover:text-accent transition-colors whitespace-nowrap">View all →</a>
         </div>
         <Carousel speedSeconds={28}>
-          {galleryItems.map((item) => <GalleryCard key={item.id} {...item} />)}
+          {galleryItems.map((item) => (
+            <GalleryCard
+              key={item.id}
+              {...item}
+              className="w-64 h-64 shrink-0 md:w-72 md:h-72"
+            />
+          ))}
         </Carousel>
       </section>
 
