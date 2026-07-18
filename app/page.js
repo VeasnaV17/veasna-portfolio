@@ -86,7 +86,7 @@ export default function Home() {
                 </div>
                 <div className="border-t border-white/10 pt-5">
                   <div className="text-xs uppercase tracking-widest text-muted2 mb-2">Current Role</div>
-                  <div className="text-lg font-serif">Digital Marketing Executive</div>
+                  <div className="text-lg font-serif">Assistant Marketing Manager</div>
                 </div>
               </div>
           </Reveal>
@@ -142,11 +142,19 @@ export default function Home() {
           {education.map((ed, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full flex flex-col items-center text-center">
-                <img
-                  src={ed.institution.includes("Thammasat") ? "/images/logos/thammasat.png" : "/images/logos/jpa.png"}
-                  alt={ed.institution}
-                  className="w-20 h-20 object-contain mb-6"
-                />
+                <a
+                  href={
+                    ed.institution.includes("Thammasat") ? "https://sgs.tu.ac.th/" : "https://www.jpa.org.kh/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-6"
+                >
+                  <img
+                    src={ed.institution.includes("Thammasat") ? "/images/logos/thammasat.png" : "/images/logos/jpa.png"}
+                    alt={ed.institution}
+                    className="w-20 h-20 object-contain hover:opacity-80 transition-opacity"
+                  />
+                </a>
                 <div className="font-mono text-xs text-muted2 mb-2">{ed.year}</div>
                 <div className="font-serif text-xl mb-1">{ed.degree}</div>
                 <div className="text-sm text-muted mb-5">{ed.institution}</div>
@@ -169,11 +177,32 @@ export default function Home() {
             {achievements.map((achievement, index) => (
               <Reveal key={index} delay={index * 0.05}>
                 <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full flex flex-col items-center text-center">
-                  <img
-                    src={achievement.name.includes("National University of Singapore") ? "/images/logos/nus.png" : achievement.name.includes("Henly") || achievement.name.includes("Henley") ? "/images/logos/henley.webp" : "/images/logos/jpa.png"}
-                    alt={achievement.name}
-                    className="w-20 h-20 object-contain mb-6"
+                  <a
+                    href={
+                      achievement.name.includes("National University of Singapore")
+                        ? "https://www.science.nus.edu.sg/"
+                        : achievement.name.includes("Henly") || achievement.name.includes("Henley")
+                        ? "https://www.henleyhs.sa.edu.au/"
+                        : "https://www.jpa.org.kh/"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-6"
+                  >
+                    <img
+                      src={
+                        achievement.name.includes("National University of Singapore")
+                          ? "/images/logos/nus.webp"
+                          : achievement.name.includes("Henly") || achievement.name.includes("Henley")
+                          ? "/images/logos/henley.webp"
+                          : "/images/logos/jpa.png"
+                      }
+                      alt={achievement.name}
+                      className={`object-contain hover:opacity-80 transition-opacity ${
+                        achievement.name.includes("National University of Singapore") ? "w-36 h-20" : "w-20 h-20"
+                      }`}
                   />
+                  </a>
                   <div className="font-serif text-xl mb-2">{achievement.name}</div>
                   <div className="font-mono text-sm text-accent">{achievement.date}</div>
                 </div>
