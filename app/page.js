@@ -110,8 +110,8 @@ export default function Home() {
             {experience.map((job, i) => (
               <Reveal key={i} delay={i * 0.05}>
                 <div className="relative">
-                  <div className="absolute -left-[38px] md:-left-[46px] top-2 w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_12px_rgba(143,155,255,0.5)]" />
-                  <div className="rounded-2xl border border-white/10 bg-panel p-7 md:p-9 hover:border-accent/40 transition-colors">
+                  <div className="absolute -left-[38px] md:-left-[46px] top-2 w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_12px_rgba(212,175,55,0.5)]" />
+                  <div className="rounded-2xl border border-white/10 bg-panel p-7 md:p-9 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(212,175,55,0.35)]">
                     <div className="flex flex-wrap justify-between items-start gap-3 mb-1">
                       <div className="font-serif text-xl md:text-2xl">{job.role}</div>
                       <div className="font-mono text-xs text-accent whitespace-nowrap pt-1">{job.dates}</div>
