@@ -143,13 +143,14 @@ export default function Home() {
           {education.map((ed, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full flex flex-col items-center text-center">
-                <a
-                  href={
-                    ed.institution.includes("Thammasat") ? "https://sgs.tu.ac.th/" : "https://www.jpa.org.kh/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mb-6"
-                >
+                  <a
+                    href={
+                      ed.institution.includes("Thammasat") ? "https://sgs.tu.ac.th/" : "https://www.jpa.org.kh/"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-6"
+                  >
                   <img
                     src={ed.institution.includes("Thammasat") ? "/images/logos/thammasat.png" : "/images/logos/jpa.png"}
                     alt={ed.institution}
@@ -178,7 +179,7 @@ export default function Home() {
             {achievements.map((achievement, index) => (
               <Reveal key={index} delay={index * 0.05}>
                 <div className="rounded-2xl border border-white/10 bg-panel p-8 h-full flex flex-col items-center text-center">
-                  <a
+                    <a
                     href={
                       achievement.name.includes("National University of Singapore")
                         ? "https://www.science.nus.edu.sg/"
@@ -264,6 +265,7 @@ export default function Home() {
       </section>
 
       {/* BLOG TEASER */}
+      {/* BLOG TEASER */}
       {posts.length > 0 && (
         <section id="blog" className="py-16 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-end justify-between mb-10">
@@ -273,9 +275,43 @@ export default function Home() {
             </div>
             <a href="/blog" className="text-sm text-muted hover:text-accent transition-colors whitespace-nowrap">Read all →</a>
           </div>
-          <Carousel speedSeconds={34}>
-            {posts.map((item) => <BlogCard key={item.slug} {...item} />)}
-          </Carousel>
+
+          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row gap-10 md:gap-12">
+            <a
+              href={`/blog/${posts[0].slug}`}
+              className="block md:w-1/2 rounded-2xl border border-white/10 bg-panel overflow-hidden hover:border-accent/40 transition-colors group"
+            >
+              <div className="aspect-[16/10] overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={posts[0].image || "/images/profile.jpg"}
+                  alt={posts[0].title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <div className="text-xs font-mono text-accent mb-3">
+                  {new Date(posts[0].date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric"
+                  })}
+                </div>
+                <div className="font-serif text-2xl md:text-3xl mb-3 leading-tight">{posts[0].title}</div>
+                <p className="text-sm text-muted leading-relaxed">{posts[0].excerpt}</p>
+              </div>
+            </a>
+
+            <div className="md:w-1/2 flex flex-col justify-center">
+              {posts.length > 1 ? (
+                <Carousel speedSeconds={34}>
+                  {posts.slice(1).map((item) => <BlogCard key={item.slug} {...item} />)}
+                </Carousel>
+              ) : (
+                <div className="text-sm text-muted">More posts coming soon.</div>
+              )}
+            </div>
+          </div>
         </section>
       )}
 
