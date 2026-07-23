@@ -244,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* GALLERY TEASER */}
-      <section className="py-16 border-t border-white/5">
+      <section id="gallery" className="py-16 border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-end justify-between mb-10">
           <div>
             <span className="block font-mono text-xs text-accent mb-4">05 — Work</span>
@@ -265,7 +265,7 @@ export default function Home() {
 
       {/* BLOG TEASER */}
       {posts.length > 0 && (
-        <section className="py-16 border-t border-white/5">
+        <section id="blog" className="py-16 border-t border-white/5">
           <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-end justify-between mb-10">
             <div>
               <span className="block font-mono text-xs text-accent mb-4">06 — Writing</span>
