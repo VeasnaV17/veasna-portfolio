@@ -15,6 +15,7 @@ import {
 } from "../lib/data";
 import { galleryItems } from "../lib/gallery";
 import { getSortedPostsData } from "../lib/posts";
+import TypingText from "../components/TypingText";
 
 export default function Home() {
   const posts = getSortedPostsData().slice(0, 4);
@@ -38,7 +39,7 @@ export default function Home() {
                 <p className="text-xl md:text-2xl text-ivory mt-3 md:mt-4 font-sans text-left">Veasna Vunn</p>
               </div>
               <p className="text-lg md:text-xl text-muted mt-6 max-w-xl font-light">
-                Building brand presence across social, content, and campaigns — from Siem Reap to Phnom Penh.
+                <TypingText text="Building brand presence across social, content, and campaigns — from Siem Reap to Phnom Penh." />
               </p>
               <p className="text-sm text-muted2 mt-5 max-w-lg leading-relaxed">{profile.summary}</p>
               <div className="flex flex-wrap gap-4 mt-11">

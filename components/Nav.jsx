@@ -27,7 +27,7 @@ export default function Nav() {
         </div>
 
         <div className="flex items-center gap-3">
-          <nav className="hidden md:flex gap-8 text-sm text-muted shrink-0">
+          <nav className="hidden md:flex gap-8 text-sm font-mono text-muted shrink-0">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-ivory transition-colors">
                 {link.label}
@@ -60,7 +60,7 @@ export default function Nav() {
           menuOpen ? "opacity-100 translate-y-0" : "pointer-events-none opacity-0 -translate-y-2"
         }`}
       >
-        <nav className="flex flex-col gap-3 px-6 py-4">
+        <nav className="flex flex-col gap-3 px-6 py-4 font-mono">
           {navLinks.map((link) => (
             <Link
               key={link.href}

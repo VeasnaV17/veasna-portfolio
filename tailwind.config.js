@@ -14,11 +14,11 @@ module.exports = {
         ivory: "#EDEBE6",
         muted: "#8b8e96",
         muted2: "#5c5f68",
-        accent: "#8f9bff",
-        accentDim: "#5b63a8"
+        accent: "#D4AF37",
+        accentDim: "#8a7328"
       },
       fontFamily: {
-        serif: ["Fraunces", "serif"],
+        serif: ["Playfair Display", "serif"],
         sans: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
         khmer: ["Moulpali", "serif"]
