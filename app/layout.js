@@ -1,9 +1,22 @@
 import "../styles/globals.css";
 import Scene3D from "../components/Scene3D";
+import { siteUrl } from "../lib/data";
 
 export const metadata = {
   title: "Veasna Vunn — Digital Marketing Specialist",
-  description: "Portfolio, gallery, and blog of Veasna Vunn, Digital Marketing Specialist."
+  description: "Portfolio, gallery, and blog of Veasna Vunn, Digital Marketing Specialist.",
+  openGraph: {
+    title: "Veasna Vunn — Digital Marketing Specialist",
+    description: "Portfolio, gallery, and blog of Veasna Vunn, Digital Marketing Specialist.",
+    url: siteUrl,
+    images: [{ url: `${siteUrl}/images/profile.jpg`, width: 1200, height: 630 }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Veasna Vunn — Digital Marketing Specialist",
+    description: "Portfolio, gallery, and blog of Veasna Vunn, Digital Marketing Specialist.",
+    images: [`${siteUrl}/images/profile.jpg`]
+  }
 };
 
 export default function RootLayout({ children }) {

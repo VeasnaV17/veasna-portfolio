@@ -3,7 +3,7 @@ import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import Reveal from "../../../components/Reveal";
 import { getAllPostSlugs, getPostData, getOtherPosts } from "../../../lib/posts";
-import { blogCategories } from "../../../lib/data";
+import { blogCategories, siteUrl } from "../../../lib/data";
 
 export async function generateStaticParams() {
   return getAllPostSlugs();
@@ -11,7 +11,24 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = await getPostData(params.slug);
-  return { title: `${post.title} — Veasna Vunn` };
+  const imageUrl = `${siteUrl}${post.image || "/images/profile.jpg"}`;
+
+  return {
+    title: `${post.title} — Veasna Vunn`,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `${siteUrl}/blog/${params.slug}`,
+      images: [{ url: imageUrl, width: 1200, height: 630 }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [imageUrl]
+    }
+  };
 }
 
 export default async function BlogPostPage({ params }) {
