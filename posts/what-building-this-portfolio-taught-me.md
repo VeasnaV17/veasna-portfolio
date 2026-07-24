@@ -2,6 +2,7 @@
 title: "What Building This Portfolio Actually Taught Me"
 date: "2026-07-25"
 excerpt: "It wasn't really about learning to code. It was about learning how to solve problems one step at a time."
+category: "Reflections"
 image: "/images/blog/lessons.png"
 ---
 

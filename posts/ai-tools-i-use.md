@@ -3,6 +3,7 @@ title: "The AI Tools I Used to Build This Site"
 date: "2026-07-24"
 excerpt: "I have zero coding background. Here's exactly what I leaned on to actually ship this portfolio."
 image: "/images/blog/aitools.png"
+category: "Reflections"
 ---
 ![Screenshot of my code editor](/images/blog/aitools.png)
 

@@ -2,6 +2,7 @@
 title: "How I Built This Site as a Complete Beginner"
 date: "2026-07-23"
 excerpt: "No coding background, no CMS, no budget for a developer. Here's how I actually built this thing."
+category: "Reflections"
 ---
 ![Screenshot of my code editor](/images/blog/blog01.jpg)
 
