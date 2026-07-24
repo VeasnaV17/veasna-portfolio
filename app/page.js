@@ -41,7 +41,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-muted mt-6 max-w-xl font-light">
                 <TypingText text="Building brand presence across social, content, and campaigns — from Siem Reap to Phnom Penh." />
               </p>
-              <p className="text-sm text-muted2 mt-5 max-w-lg leading-relaxed">{profile.summary}</p>
+              <div className="flex flex-wrap gap-4 mt-11"></div>
               <div className="flex flex-wrap gap-4 mt-11">
                 <a href="#experience" className="px-7 py-3.5 rounded-full bg-ivory text-void text-sm font-medium hover:shadow-[0_0_0_6px_rgba(143,155,255,0.35)] transition-shadow">
                   View Experience
@@ -79,7 +79,10 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-lg leading-relaxed font-light">{profile.summary}</p>
+            <p className="text-lg leading-relaxed font-light">
+              Enthusiastically dedicated to advancing my proficiency beyond my existing marketing skill sets, I am{" "}
+              <span className="text-[#D4AF37] font-medium">wholeheartedly committed to continual enhancement</span>.
+            </p>
               <div className="grid grid-cols-2 gap-8 mt-10">
                 <div className="border-t border-white/10 pt-5">
                   <div className="text-xs uppercase tracking-widest text-muted2 mb-2">Based In</div>
@@ -264,7 +267,6 @@ export default function Home() {
         </Carousel>
       </section>
 
-      {/* BLOG TEASER */}
       {/* BLOG TEASER */}
       {posts.length > 0 && (
         <section id="blog" className="py-16 border-t border-white/5">
