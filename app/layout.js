@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Scene3D from "../components/Scene3D";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: "Veasna Vunn — Digital Marketing Specialist",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className="relative bg-void text-ivory">
         <Scene3D />
         <div className="relative z-10">{children}</div>
+        <SpeedInsights />
       </body>
     </html>
   );
